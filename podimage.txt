@@ -1,0 +1,1 @@
+kubectl get pods --all-namespaces -o jsonpath='{range .items[*]}{"\n"}{.metadata.name}{":\t"}{..imageID}' | sort
